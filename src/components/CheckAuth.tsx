@@ -10,7 +10,7 @@ export const CheckAuth = ({children}: Readonly<{children: React.ReactNode;}>) =>
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        getUser(localStorage.getItem('token')).then((res) => {
+        getUser().then((res) => {
             setIsAuth(res.ok);
         }).catch((res) => {
             setIsAuth(false);

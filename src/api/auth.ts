@@ -8,8 +8,8 @@ export const getLogoutUrl = async () => {
     return await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_BASE}/logout`, {'credentials': 'include'});
 }
 
-export const getUser = async (token: string|null) => {
+export const getUser = async () => {
     return await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_BASE}/user`, {
-        headers: { 'Authorization': `Bearer ${token}` }
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
 };

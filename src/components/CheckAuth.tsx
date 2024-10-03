@@ -8,7 +8,6 @@ export const CheckAuth = ({children}: Readonly<{children: React.ReactNode;}>) =>
     const router = useRouter();
     const [isAuth, setIsAuth] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    console.log('pathName', pathName);
 
     useEffect(() => {
         getUser(localStorage.getItem('token')).then((res) => {

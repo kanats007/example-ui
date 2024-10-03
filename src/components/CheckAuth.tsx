@@ -23,9 +23,13 @@ export const CheckAuth = ({children}: Readonly<{children: React.ReactNode;}>) =>
         if (!isLoading && !isAuth && pathName !== '/login' && pathName !== '/token' && pathName !== '/logout') {
             router.push('/login');
         };
+
+        if (!isLoading && isAuth && pathName === '/login') {
+            router.push('/');
+        };
     }, [isAuth, isLoading]);
 
-    if (isLoading || (!isLoading && !isAuth && pathName !== '/login' && pathName !== '/token' && pathName !== '/logout')) {
+    if (isLoading || (!isLoading && !isAuth && pathName !== '/login' && pathName !== '/token' && pathName !== '/logout') || !isLoading && isAuth && pathName === '/login') {
         return (<h1>loading ...</h1>);
     }
 

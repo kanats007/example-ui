@@ -5,7 +5,7 @@ export const getLoginUrl = async () => {
 
 
 export const getLogoutUrl = async () => {
-    return await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_BASE}/logout`, {'credentials': 'include'});
+    return await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_BASE}/logout`);
 }
 
 export const getUser = async () => {

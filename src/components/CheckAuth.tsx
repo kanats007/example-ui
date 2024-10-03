@@ -29,7 +29,8 @@ export const CheckAuth = ({children}: Readonly<{children: React.ReactNode;}>) =>
         };
     }, [isAuth, isLoading]);
 
-    if (isLoading || (!isLoading && !isAuth && pathName !== '/login' && pathName !== '/token' && pathName !== '/logout') || !isLoading && isAuth && pathName === '/login') {
+    // useEffect内の処理はレンダリング後に実行されるためリダイレクト前に本来見せるべきでない内容がちらついてしまうのを防ぐため
+    if (isLoading || (!isLoading && !isAuth && pathName !== '/login' && pathName !== '/token' && pathName !== '/logout') || (!isLoading && isAuth && pathName === '/login')) {
         return (<h1>loading ...</h1>);
     }
 

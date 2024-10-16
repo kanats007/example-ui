@@ -1,7 +1,6 @@
-
 'use client';
-import { LoginButton } from "@/components/LoginButton";
+import { LoginButton } from '@/components/LoginButton';
 
 export default function Login() {
-  return <LoginButton/>;
+  return <LoginButton />;
 }

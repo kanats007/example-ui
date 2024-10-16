@@ -1,10 +1,12 @@
 'use client';
 import { getUser } from '@/api/auth';
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
-const handleClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+const handleClick = async (
+  e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+) => {
   const res = await getUser();
   console.log(res);
 };

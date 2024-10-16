@@ -1,7 +1,7 @@
 'use client';
 
-import { useSetToken } from "@/hooks/useSetToken";
+import { useSetToken } from '@/hooks/useSetToken';
 
 export default function Token() {
-    useSetToken();
-};
+  useSetToken();
+}

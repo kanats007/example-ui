@@ -1,11 +1,11 @@
 'use client';
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export const useLogout = () => {
-    const router = useRouter();
-    useEffect(()=> {
-        localStorage.removeItem('token');
-        router.push('/login');
-    }, [router]);
-}
+  const router = useRouter();
+  useEffect(() => {
+    localStorage.removeItem('token');
+    router.push('/login');
+  }, [router]);
+};

@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
 import { getAppleDevices } from '@/api/apple';
 import { LogoutButton } from '@/components/LogoutButton';
+import { UpdateButton } from '@/components/UpdateButton';
 
 export default async function Home() {
   const data = await getAppleDevices(true);
@@ -15,6 +16,9 @@ export default async function Home() {
       </ul>
       <div>
         <Button />
+      </div>
+      <div>
+        <UpdateButton />
       </div>
       <div>
         <LogoutButton />

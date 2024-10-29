@@ -1,5 +1,5 @@
 'use client';
-import { getUser } from '@/api/auth';
+import { updateUser } from '@/api/auth';
 import React from 'react';
 
 type Props = {};
@@ -7,15 +7,15 @@ type Props = {};
 const handleClick = async (
   e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 ) => {
-  const res = await getUser();
+  const res = await updateUser();
   const data = await res.json();
   console.log(data);
 };
 
-export const Button = (props: Props) => {
+export const UpdateButton = (props: Props) => {
   return (
     <>
-      <button onClick={handleClick}>get user</button>
+      <button onClick={handleClick}>update user</button>
     </>
   );
 };

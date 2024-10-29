@@ -13,3 +13,10 @@ export const getUser = async () => {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
   });
 };
+
+export const updateUser = async () => {
+  return await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_BASE}/user`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+  });
+};

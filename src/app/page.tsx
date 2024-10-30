@@ -7,7 +7,7 @@ export default async function Home() {
   const data = await getAppleDevices(true);
   return (
     <>
-      <h1>Hello</h1>
+      <h1>App 1</h1>
       <p>hot reload</p>
       <ul>
         {data.devices.map((item, index) => (
